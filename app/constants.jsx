@@ -1,0 +1,2 @@
+export const API_URL = "https://www.googleapis.com/blogger/v3/blogs/2399953?key=AIzaSyAZ4pi3rLdQafZGCX2HhuYdaUKy6UgKNr0"
+export const API_URL_POSTS = 'https://www.googleapis.com/blogger/v3/blogs/2399953/posts?key=AIzaSyAZ4pi3rLdQafZGCX2HhuYdaUKy6UgKNr0'
