@@ -5,6 +5,7 @@ import { API_URL, API_URL_POSTS } from "./constants.jsx";
 
 export default function Home() {
   const [data, setData] = useState({});
+  const [listOfComments, setListOfComments] = useState([])
   
   const [posts, setPosts] = useState({});
   useEffect(() => {
@@ -20,7 +21,9 @@ export default function Home() {
     const apiCall = async () => {
       const response = await fetch(API_URL_POSTS);
       const jsonData = await response.json();
-      console.log(jsonData)
+      jsonData.items.map((item) => {
+        item.replies['comments'] = []
+      })
       setPosts(jsonData);
     };
     apiCall();
